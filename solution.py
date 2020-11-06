@@ -20,11 +20,21 @@ def solve(st, k):
     """Given a string remove k characters following the rules."""
 
     occurences = {}
-
+    #adding occurences in the string to the dictionary
     for letter in st:
         count = st.count(letter)
         occurences[letter] = count
-    print(occurences)
+        s = sorted(occurences.items()) #list
+    # print(type(s))
+
+    for t in s:
+        # print(type(t)) # tuple
+        for char in t:
+            print(char)
+
+    #sort the dictionary in alphabetical order 
+    #remove given letter 
+    #return the string with the letters removed. 
 
 
 
