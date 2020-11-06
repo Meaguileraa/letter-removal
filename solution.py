@@ -1,9 +1,13 @@
 
 
-# In this Kata, you will be given a lower case string and your task will be to remove k characters from that string using the following rule:
+# In this Kata, you will be given a lower case string and your task will 
+# be to remove k characters from that string using the following rule:
 
+# RULES
 # - first remove all letter 'a', followed by letter 'b', then 'c', etc...
 # - remove the leftmost character first.
+
+
 # For example: 
 # solve('abracadabra', 1) = 'bracadabra' # remove the leftmost 'a'.
 # solve('abracadabra', 2) = 'brcadabra'  # remove 2 'a' from the left.
@@ -13,6 +17,15 @@
 
 
 def solve(st, k):
+    """Given a string remove k characters following the rules."""
+
+    occurences = {}
+
+    for letter in st:
+        count = st.count(letter)
+        occurences[letter] = count
+    print(occurences)
+
 
 
 print(solve('abracadabra', 1)) #,'bracadabra'
