@@ -10,3 +10,13 @@
 # solve('abracadabra', 6) = 'rcdbr'      # remove 5 'a', remove 1 'b' 
 # solve('abracadabra', 8) = 'rdr'
 # solve('abracadabra',50) = ''
+
+
+def solve(st, k):
+
+
+print(solve('abracadabra', 1)) #,'bracadabra'
+print(solve('abracadabra', 2)) #,'brcadabra'
+print(solve('abracadabra', 6)) #,'rcdbr'
+print(solve('abracadabra', 8)) #,'rdr'
+print(solve('abracadabra', 50)) #,''
