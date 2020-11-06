@@ -19,23 +19,29 @@
 def solve(st, k):
     """Given a string remove k characters following the rules."""
 
-    occurences = {}
-    #adding occurences in the string to the dictionary
-    for letter in st:
-        count = st.count(letter)
-        occurences[letter] = count
-        s = sorted(occurences.items()) #list
-    # print(type(s))
+    for letter in sorted(st)[:k]:
+        st = st.replace(letter, '', 1)
+    return st
 
-    for t in s:
-        # print(type(t)) # tuple
-        for char in t:
-            print(char)
+    # final = ''
+    # occurences = {}
 
-    #sort the dictionary in alphabetical order 
-    #remove given letter 
-    #return the string with the letters removed. 
+    # # count the occurences in the string
+    # #sort alphabetically 
 
+
+
+    # #adding occurences in the string to the dictionary
+    # for letter in st:
+    #     count = st.count(letter)
+    #     occurences[letter] = count
+    #     s = sorted(occurences.items()) #list
+
+    # #looping through the list, s
+    # for t in s: # t is a tuple
+    #     l = t[0]
+    #     c = t[1]
+    #     print("Letter", l, "Count", c)
 
 
 print(solve('abracadabra', 1)) #,'bracadabra'
